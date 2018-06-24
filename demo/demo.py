@@ -10,6 +10,7 @@ from pprint import pprint
 
 
 
+
 # create an instance of the API class
 api_instance = cloudmersive_barcode_api_client.BarcodeLookupApi()
 value = 'value_example' # str | Barcode value
