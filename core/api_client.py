@@ -1,8 +1,8 @@
 # coding: utf-8
 """
-    barcodeapi
+    convertapi
 
-    Barcode APIs let you generate barcode images, and recognize values from images of barcodes.  # noqa: E501
+    Convert API lets you effortlessly convert file formats and types.  # noqa: E501
 
     OpenAPI spec version: v1
     
@@ -23,9 +23,9 @@ import tempfile
 import six
 from six.moves.urllib.parse import quote
 
-from cloudmersive_barcode_api_client.configuration import Configuration
-import cloudmersive_barcode_api_client.models
-from cloudmersive_barcode_api_client import rest
+from cloudmersive_convert_api_client.configuration import Configuration
+import cloudmersive_convert_api_client.models
+from cloudmersive_convert_api_client import rest
 
 
 class ApiClient(object):
@@ -73,7 +73,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Swagger-Codegen/1.1.5/python'
+        self.user_agent = 'Swagger-Codegen/1.1.7/python'
 
     def __del__(self):
         self.pool.close()
@@ -260,7 +260,7 @@ class ApiClient(object):
             if klass in self.NATIVE_TYPES_MAPPING:
                 klass = self.NATIVE_TYPES_MAPPING[klass]
             else:
-                klass = getattr(cloudmersive_barcode_api_client.models, klass)
+                klass = getattr(cloudmersive_convert_api_client.models, klass)
 
         if klass in self.PRIMITIVE_TYPES:
             return self.__deserialize_primitive(data, klass)
