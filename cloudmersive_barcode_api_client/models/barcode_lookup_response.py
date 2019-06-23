@@ -117,6 +117,9 @@ class BarcodeLookupResponse(object):
                 ))
             else:
                 result[attr] = value
+        if issubclass(BarcodeLookupResponse, dict):
+            for key, value in self.items():
+                result[key] = value
 
         return result
 

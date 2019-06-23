@@ -37,18 +37,18 @@ class GenerateBarcodeApi(object):
         """Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.generate_barcode_ean13(value, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.generate_barcode_ean13(value, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str value: Barcode value to generate from (required)
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.generate_barcode_ean13_with_http_info(value, **kwargs)  # noqa: E501
         else:
             (data) = self.generate_barcode_ean13_with_http_info(value, **kwargs)  # noqa: E501
@@ -58,11 +58,11 @@ class GenerateBarcodeApi(object):
         """Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.generate_barcode_ean13_with_http_info(value, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.generate_barcode_ean13_with_http_info(value, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str value: Barcode value to generate from (required)
         :return: file
                  If the method is called asynchronously,
@@ -70,7 +70,7 @@ class GenerateBarcodeApi(object):
         """
 
         all_params = ['value']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -124,7 +124,7 @@ class GenerateBarcodeApi(object):
             files=local_var_files,
             response_type='file',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -134,18 +134,18 @@ class GenerateBarcodeApi(object):
         """Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.generate_barcode_ean8(value, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.generate_barcode_ean8(value, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str value: Barcode value to generate from (required)
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.generate_barcode_ean8_with_http_info(value, **kwargs)  # noqa: E501
         else:
             (data) = self.generate_barcode_ean8_with_http_info(value, **kwargs)  # noqa: E501
@@ -155,11 +155,11 @@ class GenerateBarcodeApi(object):
         """Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.generate_barcode_ean8_with_http_info(value, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.generate_barcode_ean8_with_http_info(value, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str value: Barcode value to generate from (required)
         :return: file
                  If the method is called asynchronously,
@@ -167,7 +167,7 @@ class GenerateBarcodeApi(object):
         """
 
         all_params = ['value']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -221,7 +221,7 @@ class GenerateBarcodeApi(object):
             files=local_var_files,
             response_type='file',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -231,18 +231,18 @@ class GenerateBarcodeApi(object):
         """Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.generate_barcode_qr_code(value, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.generate_barcode_qr_code(value, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str value: QR code text to convert into the QR code barcode (required)
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.generate_barcode_qr_code_with_http_info(value, **kwargs)  # noqa: E501
         else:
             (data) = self.generate_barcode_qr_code_with_http_info(value, **kwargs)  # noqa: E501
@@ -252,11 +252,11 @@ class GenerateBarcodeApi(object):
         """Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.generate_barcode_qr_code_with_http_info(value, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.generate_barcode_qr_code_with_http_info(value, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str value: QR code text to convert into the QR code barcode (required)
         :return: file
                  If the method is called asynchronously,
@@ -264,7 +264,7 @@ class GenerateBarcodeApi(object):
         """
 
         all_params = ['value']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -318,7 +318,7 @@ class GenerateBarcodeApi(object):
             files=local_var_files,
             response_type='file',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -328,18 +328,18 @@ class GenerateBarcodeApi(object):
         """Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.generate_barcode_upca(value, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.generate_barcode_upca(value, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str value: UPC-A barcode value to generate from (required)
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.generate_barcode_upca_with_http_info(value, **kwargs)  # noqa: E501
         else:
             (data) = self.generate_barcode_upca_with_http_info(value, **kwargs)  # noqa: E501
@@ -349,11 +349,11 @@ class GenerateBarcodeApi(object):
         """Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.generate_barcode_upca_with_http_info(value, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.generate_barcode_upca_with_http_info(value, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str value: UPC-A barcode value to generate from (required)
         :return: file
                  If the method is called asynchronously,
@@ -361,7 +361,7 @@ class GenerateBarcodeApi(object):
         """
 
         all_params = ['value']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -415,7 +415,7 @@ class GenerateBarcodeApi(object):
             files=local_var_files,
             response_type='file',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -425,18 +425,18 @@ class GenerateBarcodeApi(object):
         """Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.generate_barcode_upce(value, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.generate_barcode_upce(value, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str value: UPC-E barcode value to generate from (required)
         :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.generate_barcode_upce_with_http_info(value, **kwargs)  # noqa: E501
         else:
             (data) = self.generate_barcode_upce_with_http_info(value, **kwargs)  # noqa: E501
@@ -446,11 +446,11 @@ class GenerateBarcodeApi(object):
         """Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.generate_barcode_upce_with_http_info(value, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.generate_barcode_upce_with_http_info(value, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str value: UPC-E barcode value to generate from (required)
         :return: file
                  If the method is called asynchronously,
@@ -458,7 +458,7 @@ class GenerateBarcodeApi(object):
         """
 
         all_params = ['value']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -512,7 +512,7 @@ class GenerateBarcodeApi(object):
             files=local_var_files,
             response_type='file',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
