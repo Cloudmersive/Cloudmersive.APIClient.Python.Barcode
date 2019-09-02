@@ -1,6 +1,6 @@
 ﻿{
 "projectName" : "cloudmersive_barcode_api_client",
   "packageName" : "cloudmersive_barcode_api_client",
-  "packageVersion": "2.0.2",
+  "packageVersion": "2.0.3",
   "packageUrl": "https://www.cloudmersive.com/barcode-api"
 }  

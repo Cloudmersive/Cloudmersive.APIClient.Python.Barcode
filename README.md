@@ -1,10 +1,10 @@
 # cloudmersive_barcode_api_client
 Barcode APIs let you generate barcode images, and recognize values from images of barcodes.
 
-This Python package provides a native API client for [Cloudmersive OCR](https://www.cloudmersive.com/barcode-api)
+This Python package provides a native API client for [Cloudmersive Barcode API](https://www.cloudmersive.com/barcode-api)
 
 - API version: v1
-- Package version: 2.0.2
+- Package version: 2.0.3
 - Build package: io.swagger.codegen.languages.PythonClientCodegen
 
 ## Requirements.
