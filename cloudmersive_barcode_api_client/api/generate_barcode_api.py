@@ -34,8 +34,9 @@ class GenerateBarcodeApi(object):
         self.api_client = api_client
 
     def generate_barcode_ean13(self, value, **kwargs):  # noqa: E501
-        """Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode  # noqa: E501
+        """Generate a EAN-13 code barcode as PNG file  # noqa: E501
 
+        Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.generate_barcode_ean13(value, async_req=True)
@@ -55,8 +56,9 @@ class GenerateBarcodeApi(object):
             return data
 
     def generate_barcode_ean13_with_http_info(self, value, **kwargs):  # noqa: E501
-        """Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode  # noqa: E501
+        """Generate a EAN-13 code barcode as PNG file  # noqa: E501
 
+        Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.generate_barcode_ean13_with_http_info(value, async_req=True)
@@ -131,8 +133,9 @@ class GenerateBarcodeApi(object):
             collection_formats=collection_formats)
 
     def generate_barcode_ean8(self, value, **kwargs):  # noqa: E501
-        """Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode  # noqa: E501
+        """Generate a EAN-8 code barcode as PNG file  # noqa: E501
 
+        Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.generate_barcode_ean8(value, async_req=True)
@@ -152,8 +155,9 @@ class GenerateBarcodeApi(object):
             return data
 
     def generate_barcode_ean8_with_http_info(self, value, **kwargs):  # noqa: E501
-        """Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode  # noqa: E501
+        """Generate a EAN-8 code barcode as PNG file  # noqa: E501
 
+        Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.generate_barcode_ean8_with_http_info(value, async_req=True)
@@ -228,8 +232,9 @@ class GenerateBarcodeApi(object):
             collection_formats=collection_formats)
 
     def generate_barcode_qr_code(self, value, **kwargs):  # noqa: E501
-        """Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information  # noqa: E501
+        """Generate a QR code barcode as PNG file  # noqa: E501
 
+        Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.generate_barcode_qr_code(value, async_req=True)
@@ -249,8 +254,9 @@ class GenerateBarcodeApi(object):
             return data
 
     def generate_barcode_qr_code_with_http_info(self, value, **kwargs):  # noqa: E501
-        """Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information  # noqa: E501
+        """Generate a QR code barcode as PNG file  # noqa: E501
 
+        Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.generate_barcode_qr_code_with_http_info(value, async_req=True)
@@ -325,8 +331,9 @@ class GenerateBarcodeApi(object):
             collection_formats=collection_formats)
 
     def generate_barcode_upca(self, value, **kwargs):  # noqa: E501
-        """Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode  # noqa: E501
+        """Generate a UPC-A code barcode as PNG file  # noqa: E501
 
+        Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.generate_barcode_upca(value, async_req=True)
@@ -346,8 +353,9 @@ class GenerateBarcodeApi(object):
             return data
 
     def generate_barcode_upca_with_http_info(self, value, **kwargs):  # noqa: E501
-        """Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode  # noqa: E501
+        """Generate a UPC-A code barcode as PNG file  # noqa: E501
 
+        Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.generate_barcode_upca_with_http_info(value, async_req=True)
@@ -422,8 +430,9 @@ class GenerateBarcodeApi(object):
             collection_formats=collection_formats)
 
     def generate_barcode_upce(self, value, **kwargs):  # noqa: E501
-        """Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode  # noqa: E501
+        """Generate a UPC-E code barcode as PNG file  # noqa: E501
 
+        Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.generate_barcode_upce(value, async_req=True)
@@ -443,8 +452,9 @@ class GenerateBarcodeApi(object):
             return data
 
     def generate_barcode_upce_with_http_info(self, value, **kwargs):  # noqa: E501
-        """Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode  # noqa: E501
+        """Generate a UPC-E code barcode as PNG file  # noqa: E501
 
+        Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.generate_barcode_upce_with_http_info(value, async_req=True)

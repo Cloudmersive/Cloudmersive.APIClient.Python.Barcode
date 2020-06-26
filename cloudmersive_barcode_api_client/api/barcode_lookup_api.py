@@ -34,8 +34,9 @@ class BarcodeLookupApi(object):
         self.api_client = api_client
 
     def barcode_lookup_ean_lookup(self, value, **kwargs):  # noqa: E501
-        """Lookup a barcode value and return product data  # noqa: E501
+        """Lookup EAN barcode value, return product data  # noqa: E501
 
+        Lookup an input EAN barcode and return key details about the product  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.barcode_lookup_ean_lookup(value, async_req=True)
@@ -55,8 +56,9 @@ class BarcodeLookupApi(object):
             return data
 
     def barcode_lookup_ean_lookup_with_http_info(self, value, **kwargs):  # noqa: E501
-        """Lookup a barcode value and return product data  # noqa: E501
+        """Lookup EAN barcode value, return product data  # noqa: E501
 
+        Lookup an input EAN barcode and return key details about the product  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.barcode_lookup_ean_lookup_with_http_info(value, async_req=True)

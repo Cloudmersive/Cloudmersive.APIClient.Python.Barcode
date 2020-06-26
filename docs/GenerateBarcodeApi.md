@@ -4,15 +4,17 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**generate_barcode_ean13**](GenerateBarcodeApi.md#generate_barcode_ean13) | **POST** /barcode/generate/ean-13 | Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
-[**generate_barcode_ean8**](GenerateBarcodeApi.md#generate_barcode_ean8) | **POST** /barcode/generate/ean-8 | Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode
-[**generate_barcode_qr_code**](GenerateBarcodeApi.md#generate_barcode_qr_code) | **POST** /barcode/generate/qrcode | Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information
-[**generate_barcode_upca**](GenerateBarcodeApi.md#generate_barcode_upca) | **POST** /barcode/generate/upc-a | Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode
-[**generate_barcode_upce**](GenerateBarcodeApi.md#generate_barcode_upce) | **POST** /barcode/generate/upc-e | Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode
+[**generate_barcode_ean13**](GenerateBarcodeApi.md#generate_barcode_ean13) | **POST** /barcode/generate/ean-13 | Generate a EAN-13 code barcode as PNG file
+[**generate_barcode_ean8**](GenerateBarcodeApi.md#generate_barcode_ean8) | **POST** /barcode/generate/ean-8 | Generate a EAN-8 code barcode as PNG file
+[**generate_barcode_qr_code**](GenerateBarcodeApi.md#generate_barcode_qr_code) | **POST** /barcode/generate/qrcode | Generate a QR code barcode as PNG file
+[**generate_barcode_upca**](GenerateBarcodeApi.md#generate_barcode_upca) | **POST** /barcode/generate/upc-a | Generate a UPC-A code barcode as PNG file
+[**generate_barcode_upce**](GenerateBarcodeApi.md#generate_barcode_upce) | **POST** /barcode/generate/upc-e | Generate a UPC-E code barcode as PNG file
 
 
 # **generate_barcode_ean13**
 > file generate_barcode_ean13(value)
+
+Generate a EAN-13 code barcode as PNG file
 
 Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
 
@@ -35,7 +37,7 @@ api_instance = cloudmersive_barcode_api_client.GenerateBarcodeApi(cloudmersive_b
 value = 'value_example' # str | Barcode value to generate from
 
 try:
-    # Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
+    # Generate a EAN-13 code barcode as PNG file
     api_response = api_instance.generate_barcode_ean13(value)
     pprint(api_response)
 except ApiException as e:
@@ -66,6 +68,8 @@ Name | Type | Description  | Notes
 # **generate_barcode_ean8**
 > file generate_barcode_ean8(value)
 
+Generate a EAN-8 code barcode as PNG file
+
 Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode
 
 ### Example
@@ -87,7 +91,7 @@ api_instance = cloudmersive_barcode_api_client.GenerateBarcodeApi(cloudmersive_b
 value = 'value_example' # str | Barcode value to generate from
 
 try:
-    # Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode
+    # Generate a EAN-8 code barcode as PNG file
     api_response = api_instance.generate_barcode_ean8(value)
     pprint(api_response)
 except ApiException as e:
@@ -118,6 +122,8 @@ Name | Type | Description  | Notes
 # **generate_barcode_qr_code**
 > file generate_barcode_qr_code(value)
 
+Generate a QR code barcode as PNG file
+
 Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information
 
 ### Example
@@ -139,7 +145,7 @@ api_instance = cloudmersive_barcode_api_client.GenerateBarcodeApi(cloudmersive_b
 value = 'value_example' # str | QR code text to convert into the QR code barcode
 
 try:
-    # Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information
+    # Generate a QR code barcode as PNG file
     api_response = api_instance.generate_barcode_qr_code(value)
     pprint(api_response)
 except ApiException as e:
@@ -170,6 +176,8 @@ Name | Type | Description  | Notes
 # **generate_barcode_upca**
 > file generate_barcode_upca(value)
 
+Generate a UPC-A code barcode as PNG file
+
 Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode
 
 ### Example
@@ -191,7 +199,7 @@ api_instance = cloudmersive_barcode_api_client.GenerateBarcodeApi(cloudmersive_b
 value = 'value_example' # str | UPC-A barcode value to generate from
 
 try:
-    # Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode
+    # Generate a UPC-A code barcode as PNG file
     api_response = api_instance.generate_barcode_upca(value)
     pprint(api_response)
 except ApiException as e:
@@ -222,6 +230,8 @@ Name | Type | Description  | Notes
 # **generate_barcode_upce**
 > file generate_barcode_upce(value)
 
+Generate a UPC-E code barcode as PNG file
+
 Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode
 
 ### Example
@@ -243,7 +253,7 @@ api_instance = cloudmersive_barcode_api_client.GenerateBarcodeApi(cloudmersive_b
 value = 'value_example' # str | UPC-E barcode value to generate from
 
 try:
-    # Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode
+    # Generate a UPC-E code barcode as PNG file
     api_response = api_instance.generate_barcode_upce(value)
     pprint(api_response)
 except ApiException as e:

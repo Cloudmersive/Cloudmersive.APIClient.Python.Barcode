@@ -56,6 +56,7 @@ class ProductMatch(object):
     def ean(self):
         """Gets the ean of this ProductMatch.  # noqa: E501
 
+        EAN code for the product  # noqa: E501
 
         :return: The ean of this ProductMatch.  # noqa: E501
         :rtype: str
@@ -66,6 +67,7 @@ class ProductMatch(object):
     def ean(self, ean):
         """Sets the ean of this ProductMatch.
 
+        EAN code for the product  # noqa: E501
 
         :param ean: The ean of this ProductMatch.  # noqa: E501
         :type: str
@@ -77,6 +79,7 @@ class ProductMatch(object):
     def title(self):
         """Gets the title of this ProductMatch.  # noqa: E501
 
+        Title of the product  # noqa: E501
 
         :return: The title of this ProductMatch.  # noqa: E501
         :rtype: str
@@ -87,6 +90,7 @@ class ProductMatch(object):
     def title(self, title):
         """Sets the title of this ProductMatch.
 
+        Title of the product  # noqa: E501
 
         :param title: The title of this ProductMatch.  # noqa: E501
         :type: str

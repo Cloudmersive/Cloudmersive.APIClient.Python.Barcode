@@ -4,7 +4,7 @@ Barcode APIs let you generate barcode images, and recognize values from images o
 This Python package provides a native API client for [Cloudmersive Barcode API](https://www.cloudmersive.com/barcode-api)
 
 - API version: v1
-- Package version: 2.0.3
+- Package version: 3.0.1
 - Build package: io.swagger.codegen.languages.PythonClientCodegen
 
 ## Requirements.
@@ -62,7 +62,7 @@ api_instance = cloudmersive_barcode_api_client.BarcodeLookupApi(cloudmersive_bar
 value = 'value_example' # str | Barcode value
 
 try:
-    # Lookup a barcode value and return product data
+    # Lookup EAN barcode value, return product data
     api_response = api_instance.barcode_lookup_ean_lookup(value)
     pprint(api_response)
 except ApiException as e:
@@ -76,13 +76,13 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*BarcodeLookupApi* | [**barcode_lookup_ean_lookup**](docs/BarcodeLookupApi.md#barcode_lookup_ean_lookup) | **POST** /barcode/lookup/ean | Lookup a barcode value and return product data
-*BarcodeScanApi* | [**barcode_scan_image**](docs/BarcodeScanApi.md#barcode_scan_image) | **POST** /barcode/scan/image | Scan an image for a barcode and turn the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
-*GenerateBarcodeApi* | [**generate_barcode_ean13**](docs/GenerateBarcodeApi.md#generate_barcode_ean13) | **POST** /barcode/generate/ean-13 | Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
-*GenerateBarcodeApi* | [**generate_barcode_ean8**](docs/GenerateBarcodeApi.md#generate_barcode_ean8) | **POST** /barcode/generate/ean-8 | Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode
-*GenerateBarcodeApi* | [**generate_barcode_qr_code**](docs/GenerateBarcodeApi.md#generate_barcode_qr_code) | **POST** /barcode/generate/qrcode | Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information
-*GenerateBarcodeApi* | [**generate_barcode_upca**](docs/GenerateBarcodeApi.md#generate_barcode_upca) | **POST** /barcode/generate/upc-a | Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode
-*GenerateBarcodeApi* | [**generate_barcode_upce**](docs/GenerateBarcodeApi.md#generate_barcode_upce) | **POST** /barcode/generate/upc-e | Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode
+*BarcodeLookupApi* | [**barcode_lookup_ean_lookup**](docs/BarcodeLookupApi.md#barcode_lookup_ean_lookup) | **POST** /barcode/lookup/ean | Lookup EAN barcode value, return product data
+*BarcodeScanApi* | [**barcode_scan_image**](docs/BarcodeScanApi.md#barcode_scan_image) | **POST** /barcode/scan/image | Scan and recognize an image of a barcode
+*GenerateBarcodeApi* | [**generate_barcode_ean13**](docs/GenerateBarcodeApi.md#generate_barcode_ean13) | **POST** /barcode/generate/ean-13 | Generate a EAN-13 code barcode as PNG file
+*GenerateBarcodeApi* | [**generate_barcode_ean8**](docs/GenerateBarcodeApi.md#generate_barcode_ean8) | **POST** /barcode/generate/ean-8 | Generate a EAN-8 code barcode as PNG file
+*GenerateBarcodeApi* | [**generate_barcode_qr_code**](docs/GenerateBarcodeApi.md#generate_barcode_qr_code) | **POST** /barcode/generate/qrcode | Generate a QR code barcode as PNG file
+*GenerateBarcodeApi* | [**generate_barcode_upca**](docs/GenerateBarcodeApi.md#generate_barcode_upca) | **POST** /barcode/generate/upc-a | Generate a UPC-A code barcode as PNG file
+*GenerateBarcodeApi* | [**generate_barcode_upce**](docs/GenerateBarcodeApi.md#generate_barcode_upce) | **POST** /barcode/generate/upc-e | Generate a UPC-E code barcode as PNG file
 
 
 ## Documentation For Models
