@@ -4,7 +4,7 @@ Barcode APIs let you generate barcode images, and recognize values from images o
 This Python package provides a native API client for [Cloudmersive Barcode API](https://www.cloudmersive.com/barcode-api)
 
 - API version: v1
-- Package version: 3.0.2
+- Package version: 3.1.0
 - Build package: io.swagger.codegen.languages.PythonClientCodegen
 
 ## Requirements.
@@ -78,6 +78,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *BarcodeLookupApi* | [**barcode_lookup_ean_lookup**](docs/BarcodeLookupApi.md#barcode_lookup_ean_lookup) | **POST** /barcode/lookup/ean | Lookup EAN barcode value, return product data
 *BarcodeScanApi* | [**barcode_scan_image**](docs/BarcodeScanApi.md#barcode_scan_image) | **POST** /barcode/scan/image | Scan and recognize an image of a barcode
+*BarcodeScanApi* | [**barcode_scan_image_advanced_qr**](docs/BarcodeScanApi.md#barcode_scan_image_advanced_qr) | **POST** /barcode/scan/image/advanced/qr | Advanced AI scan and recognition of an image of one or more QR barcodes
 *GenerateBarcodeApi* | [**generate_barcode_ean13**](docs/GenerateBarcodeApi.md#generate_barcode_ean13) | **POST** /barcode/generate/ean-13 | Generate a EAN-13 code barcode as PNG file
 *GenerateBarcodeApi* | [**generate_barcode_ean8**](docs/GenerateBarcodeApi.md#generate_barcode_ean8) | **POST** /barcode/generate/ean-8 | Generate a EAN-8 code barcode as PNG file
 *GenerateBarcodeApi* | [**generate_barcode_qr_code**](docs/GenerateBarcodeApi.md#generate_barcode_qr_code) | **POST** /barcode/generate/qrcode | Generate a QR code barcode as PNG file
@@ -88,6 +89,8 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [BarcodeLookupResponse](docs/BarcodeLookupResponse.md)
+ - [BarcodeQRResultItem](docs/BarcodeQRResultItem.md)
+ - [BarcodeScanQRAdvancedResult](docs/BarcodeScanQRAdvancedResult.md)
  - [BarcodeScanResult](docs/BarcodeScanResult.md)
  - [ProductMatch](docs/ProductMatch.md)
 
