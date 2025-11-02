@@ -132,10 +132,109 @@ class BarcodeScanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def barcode_scan_image_advanced(self, image_file, **kwargs):  # noqa: E501
+        """Advanced AI scan and recognition of an image of one or more barcodes of any type  # noqa: E501
+
+        Scan an image or photo of a barcode and return the result with enhanced accuracy, particularlly for low quality inputs using Advanced AI.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB.  Uses large model AI.  Consumes 100 API calls per image page.  For Managed Instance and Private Cloud requires GPU infrastructure.  Supports PNG, PDF and JPEG input file formats.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.barcode_scan_image_advanced(image_file, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param file image_file: Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. (required)
+        :return: BarcodeAdvancedScanResult
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.barcode_scan_image_advanced_with_http_info(image_file, **kwargs)  # noqa: E501
+        else:
+            (data) = self.barcode_scan_image_advanced_with_http_info(image_file, **kwargs)  # noqa: E501
+            return data
+
+    def barcode_scan_image_advanced_with_http_info(self, image_file, **kwargs):  # noqa: E501
+        """Advanced AI scan and recognition of an image of one or more barcodes of any type  # noqa: E501
+
+        Scan an image or photo of a barcode and return the result with enhanced accuracy, particularlly for low quality inputs using Advanced AI.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB.  Uses large model AI.  Consumes 100 API calls per image page.  For Managed Instance and Private Cloud requires GPU infrastructure.  Supports PNG, PDF and JPEG input file formats.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.barcode_scan_image_advanced_with_http_info(image_file, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param file image_file: Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. (required)
+        :return: BarcodeAdvancedScanResult
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['image_file']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method barcode_scan_image_advanced" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'image_file' is set
+        if ('image_file' not in params or
+                params['image_file'] is None):
+            raise ValueError("Missing the required parameter `image_file` when calling `barcode_scan_image_advanced`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'image_file' in params:
+            local_var_files['imageFile'] = params['image_file']  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json', 'text/json', 'application/xml', 'text/xml'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Apikey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/barcode/scan/image/advanced', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='BarcodeAdvancedScanResult',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def barcode_scan_image_advanced_qr(self, image_file, **kwargs):  # noqa: E501
         """Advanced AI scan and recognition of an image of one or more QR barcodes  # noqa: E501
 
-        Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG and JPEG input file formats.  # noqa: E501
+        Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG, PDF and JPEG input file formats.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.barcode_scan_image_advanced_qr(image_file, async_req=True)
@@ -144,6 +243,7 @@ class BarcodeScanApi(object):
         :param async_req bool
         :param file image_file: Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. (required)
         :param str preprocessing: Optional, preprocessing mode, default is 'Auto'.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to 'None' if you do not want to use automatic image unrotation and enhancement.
+        :param str recognition_mode: Optional, recognitionMode mode, default is 'Advanced'.  Possible values are Advanced, and Advanced2 which provides the most advanced available barcode recognition.
         :return: BarcodeScanQRAdvancedResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -158,7 +258,7 @@ class BarcodeScanApi(object):
     def barcode_scan_image_advanced_qr_with_http_info(self, image_file, **kwargs):  # noqa: E501
         """Advanced AI scan and recognition of an image of one or more QR barcodes  # noqa: E501
 
-        Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG and JPEG input file formats.  # noqa: E501
+        Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG, PDF and JPEG input file formats.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.barcode_scan_image_advanced_qr_with_http_info(image_file, async_req=True)
@@ -167,12 +267,13 @@ class BarcodeScanApi(object):
         :param async_req bool
         :param file image_file: Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. (required)
         :param str preprocessing: Optional, preprocessing mode, default is 'Auto'.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to 'None' if you do not want to use automatic image unrotation and enhancement.
+        :param str recognition_mode: Optional, recognitionMode mode, default is 'Advanced'.  Possible values are Advanced, and Advanced2 which provides the most advanced available barcode recognition.
         :return: BarcodeScanQRAdvancedResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['image_file', 'preprocessing']  # noqa: E501
+        all_params = ['image_file', 'preprocessing', 'recognition_mode']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -201,6 +302,8 @@ class BarcodeScanApi(object):
         header_params = {}
         if 'preprocessing' in params:
             header_params['preprocessing'] = params['preprocessing']  # noqa: E501
+        if 'recognition_mode' in params:
+            header_params['recognitionMode'] = params['recognition_mode']  # noqa: E501
 
         form_params = []
         local_var_files = {}

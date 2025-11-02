@@ -15,6 +15,8 @@
 from __future__ import absolute_import
 
 # import models into model package
+from cloudmersive_barcode_api_client.models.barcode_advanced_result_item import BarcodeAdvancedResultItem
+from cloudmersive_barcode_api_client.models.barcode_advanced_scan_result import BarcodeAdvancedScanResult
 from cloudmersive_barcode_api_client.models.barcode_lookup_response import BarcodeLookupResponse
 from cloudmersive_barcode_api_client.models.barcode_qr_result_item import BarcodeQRResultItem
 from cloudmersive_barcode_api_client.models.barcode_scan_qr_advanced_result import BarcodeScanQRAdvancedResult

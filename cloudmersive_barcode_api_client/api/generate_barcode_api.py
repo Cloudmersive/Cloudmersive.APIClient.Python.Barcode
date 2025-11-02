@@ -33,6 +33,117 @@ class GenerateBarcodeApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def generate_barcode_code128(self, value, **kwargs):  # noqa: E501
+        """Generate a EAN-13 code barcode as PNG file  # noqa: E501
+
+        Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.generate_barcode_code128(value, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str value: Barcode value to generate from (required)
+        :param int width: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param int height: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param bool include_label: Optional: show text label on the image of the barcode value, default is true.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.generate_barcode_code128_with_http_info(value, **kwargs)  # noqa: E501
+        else:
+            (data) = self.generate_barcode_code128_with_http_info(value, **kwargs)  # noqa: E501
+            return data
+
+    def generate_barcode_code128_with_http_info(self, value, **kwargs):  # noqa: E501
+        """Generate a EAN-13 code barcode as PNG file  # noqa: E501
+
+        Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.generate_barcode_code128_with_http_info(value, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str value: Barcode value to generate from (required)
+        :param int width: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param int height: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param bool include_label: Optional: show text label on the image of the barcode value, default is true.
+        :return: str
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['value', 'width', 'height', 'include_label']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method generate_barcode_code128" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'value' is set
+        if ('value' not in params or
+                params['value'] is None):
+            raise ValueError("Missing the required parameter `value` when calling `generate_barcode_code128`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+        if 'width' in params:
+            header_params['width'] = params['width']  # noqa: E501
+        if 'height' in params:
+            header_params['height'] = params['height']  # noqa: E501
+        if 'include_label' in params:
+            header_params['includeLabel'] = params['include_label']  # noqa: E501
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'value' in params:
+            body_params = params['value']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/octet-stream'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json', 'text/json', 'application/xml', 'text/xml', 'application/x-www-form-urlencoded'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Apikey']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/barcode/generate/code-128', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='str',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def generate_barcode_ean13(self, value, **kwargs):  # noqa: E501
         """Generate a EAN-13 code barcode as PNG file  # noqa: E501
 
@@ -44,6 +155,9 @@ class GenerateBarcodeApi(object):
 
         :param async_req bool
         :param str value: Barcode value to generate from (required)
+        :param int width: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param int height: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param bool include_label: Optional: show text label on the image of the barcode value, default is true.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -66,12 +180,15 @@ class GenerateBarcodeApi(object):
 
         :param async_req bool
         :param str value: Barcode value to generate from (required)
+        :param int width: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param int height: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param bool include_label: Optional: show text label on the image of the barcode value, default is true.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['value']  # noqa: E501
+        all_params = ['value', 'width', 'height', 'include_label']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -98,6 +215,12 @@ class GenerateBarcodeApi(object):
         query_params = []
 
         header_params = {}
+        if 'width' in params:
+            header_params['width'] = params['width']  # noqa: E501
+        if 'height' in params:
+            header_params['height'] = params['height']  # noqa: E501
+        if 'include_label' in params:
+            header_params['includeLabel'] = params['include_label']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -143,6 +266,9 @@ class GenerateBarcodeApi(object):
 
         :param async_req bool
         :param str value: Barcode value to generate from (required)
+        :param int width: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param int height: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param bool include_label: Optional: show text label on the image of the barcode value, default is true.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -165,12 +291,15 @@ class GenerateBarcodeApi(object):
 
         :param async_req bool
         :param str value: Barcode value to generate from (required)
+        :param int width: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param int height: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param bool include_label: Optional: show text label on the image of the barcode value, default is true.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['value']  # noqa: E501
+        all_params = ['value', 'width', 'height', 'include_label']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -197,6 +326,12 @@ class GenerateBarcodeApi(object):
         query_params = []
 
         header_params = {}
+        if 'width' in params:
+            header_params['width'] = params['width']  # noqa: E501
+        if 'height' in params:
+            header_params['height'] = params['height']  # noqa: E501
+        if 'include_label' in params:
+            header_params['includeLabel'] = params['include_label']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -242,6 +377,8 @@ class GenerateBarcodeApi(object):
 
         :param async_req bool
         :param str value: QR code text to convert into the QR code barcode (required)
+        :param int width: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param int height: Optional: width of the barcode in pixels.  Minimum value of 10.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -264,12 +401,14 @@ class GenerateBarcodeApi(object):
 
         :param async_req bool
         :param str value: QR code text to convert into the QR code barcode (required)
+        :param int width: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param int height: Optional: width of the barcode in pixels.  Minimum value of 10.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['value']  # noqa: E501
+        all_params = ['value', 'width', 'height']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -296,6 +435,10 @@ class GenerateBarcodeApi(object):
         query_params = []
 
         header_params = {}
+        if 'width' in params:
+            header_params['width'] = params['width']  # noqa: E501
+        if 'height' in params:
+            header_params['height'] = params['height']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -341,6 +484,9 @@ class GenerateBarcodeApi(object):
 
         :param async_req bool
         :param str value: UPC-A barcode value to generate from (required)
+        :param int width: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param int height: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param bool include_label: Optional: show text label on the image of the barcode value, default is true.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -363,12 +509,15 @@ class GenerateBarcodeApi(object):
 
         :param async_req bool
         :param str value: UPC-A barcode value to generate from (required)
+        :param int width: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param int height: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param bool include_label: Optional: show text label on the image of the barcode value, default is true.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['value']  # noqa: E501
+        all_params = ['value', 'width', 'height', 'include_label']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -395,6 +544,12 @@ class GenerateBarcodeApi(object):
         query_params = []
 
         header_params = {}
+        if 'width' in params:
+            header_params['width'] = params['width']  # noqa: E501
+        if 'height' in params:
+            header_params['height'] = params['height']  # noqa: E501
+        if 'include_label' in params:
+            header_params['includeLabel'] = params['include_label']  # noqa: E501
 
         form_params = []
         local_var_files = {}
@@ -440,6 +595,9 @@ class GenerateBarcodeApi(object):
 
         :param async_req bool
         :param str value: UPC-E barcode value to generate from (required)
+        :param int width: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param int height: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param bool include_label: Optional: show text label on the image of the barcode value, default is true.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -462,12 +620,15 @@ class GenerateBarcodeApi(object):
 
         :param async_req bool
         :param str value: UPC-E barcode value to generate from (required)
+        :param int width: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param int height: Optional: width of the barcode in pixels.  Minimum value of 10.
+        :param bool include_label: Optional: show text label on the image of the barcode value, default is true.
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['value']  # noqa: E501
+        all_params = ['value', 'width', 'height', 'include_label']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -494,6 +655,12 @@ class GenerateBarcodeApi(object):
         query_params = []
 
         header_params = {}
+        if 'width' in params:
+            header_params['width'] = params['width']  # noqa: E501
+        if 'height' in params:
+            header_params['height'] = params['height']  # noqa: E501
+        if 'include_label' in params:
+            header_params['includeLabel'] = params['include_label']  # noqa: E501
 
         form_params = []
         local_var_files = {}
